@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -38,5 +42,11 @@
 }
 
 .read-the-docs {
-  color: #888;
+  color: #ffffff;
+}
+
+@layer base {
+  h2 {
+    @apply text-2xl font-bold m-8;
+  }
 }

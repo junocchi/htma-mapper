@@ -8,8 +8,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #0d1a59;
+  background-color: #cceae5;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -46,7 +46,8 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  color: #ffffff;
+  background-color: #0d1a59;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -57,7 +58,24 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+form {
+  color: #0d1a59;
+  text-align: right;
+}
+::placeholder {
+  padding-left: 0.6em;
+  font-size: 1em;
+  color: gray;
+}
 
+input {
+  font-size: 1em;
+  font-weight: 500;
+  color: #0d1a59;
+  background-color: white;
+  border-width: 0px;
+  border-radius: 30px;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
