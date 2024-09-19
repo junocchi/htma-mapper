@@ -1,6 +1,6 @@
 import "./App.css";
 import { Footer } from "./components/Footer/Footer";
-import MineralsForm from "./components/MineralsForm";
+import MineralsForm from "./components/MineralsForm/MineralsForm";
 
 export default function App() {
   return (
