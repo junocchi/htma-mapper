@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { checkMineralRangesResults } from "../helpers/checkMineralRangesResults";
-import { EliminationTable } from "./EliminationTable/EliminationTable";
-import { CategorizedMinerals, MineralInputs } from "../types/types";
-import { UserInput } from "./UserInput/UserInput";
-import { distributeMinerals } from "../helpers/distributeMinerals";
+import { checkMineralRangesResults } from "../../helpers/checkMineralRangesResults";
+import { EliminationTable } from "../EliminationTable/EliminationTable";
+import { CategorizedMinerals, MineralInputs } from "../../types/types";
+import { UserInput } from "../UserInput/UserInput";
+import { distributeMinerals } from "../../helpers/distributeMinerals";
 
 const nutritionalMinerals = [
   "Calcium",
@@ -61,7 +61,7 @@ export const MineralsForm = () => {
     event.preventDefault();
     const mineralRangesResults = checkMineralRangesResults();
 
-    // Check if the mineral ranges data is available
+    // Check if the mineral range data is available
     if (mineralRangesResults.status === "success") {
       const newCategorizedMinerals = distributeMinerals(
         formValues,
@@ -101,7 +101,7 @@ export const MineralsForm = () => {
             .map((mineral) => (
               <UserInput
                 label={mineral}
-                value={formValues[mineral]}
+                value={formValues[mineral] || ""}
                 onChange={handleMineralInputChange}
               />
             ))}
@@ -117,7 +117,7 @@ export const MineralsForm = () => {
             .map((mineral) => (
               <UserInput
                 label={mineral}
-                value={formValues[mineral]}
+                value={formValues[mineral] || ""}
                 onChange={handleMineralInputChange}
               />
             ))}
