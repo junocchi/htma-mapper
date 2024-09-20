@@ -15,7 +15,7 @@ export const UserInput = ({ label, value, onChange }: Props) => {
   };
 
   return (
-    <div key={label} className="flex items-center mb-3 justify-end -ml-10">
+    <div key={label} className="flex items-center mb-3 -mr-4 justify-end">
       <label htmlFor={label} className="font-bold pr-2">
         {label}:
       </label>

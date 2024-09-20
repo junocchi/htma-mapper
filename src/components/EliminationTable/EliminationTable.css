@@ -1,0 +1,13 @@
+.EliminationTable__container {
+  background-color: #ffffff;
+  padding: 40px;
+  width: 100%;
+}
+
+.EliminationTable__table {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 150px);
+  grid-gap: 16px;
+  padding: 8px;
+  margin: auto;
+}
