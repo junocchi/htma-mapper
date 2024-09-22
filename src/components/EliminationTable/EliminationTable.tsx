@@ -1,6 +1,7 @@
 import { type CategorizedMinerals } from "../../types/types";
 
-// Helper function for displaying minerals
+import "./EliminationTable.css";
+
 function renderMinerals(minerals: string[], bgColor: string) {
   return minerals.length > 0 ? (
     minerals.map((mineral, index) => (
@@ -24,12 +25,10 @@ export const EliminationTable = ({
   categorizedMinerals: CategorizedMinerals;
 }) => {
   return (
-    <div className="container mx-auto bg-white p-10">
-      <h2 className="text-2xl font-bold mb-8">
-        Nutritional Elements Elimination
-      </h2>
-      <div className="grid grid-cols-5 gap-4 p-2">
-        <div className="col-span-1 w-36">
+    <div className="EliminationTable__container">
+      <h2 className="text-2xl font-bold mb-8">Elements Elimination</h2>
+      <div className="EliminationTable__table">
+        <div className="col-span-1">
           <h2 className="bg-green-500 rounded-full py-1 px-4 text-slate-950">
             IDEAL/GOOD
           </h2>

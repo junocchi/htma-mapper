@@ -3,9 +3,11 @@
 @tailwind utilities;
 
 #root {
-  max-width: 1280px;
+  /* don't change - defined based on the elimination table */
+  max-width: 977px;
   margin: 0 auto;
   padding: 2rem;
+  width: 100%;
   text-align: center;
 }
 
