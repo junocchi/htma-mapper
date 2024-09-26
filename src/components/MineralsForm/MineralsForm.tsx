@@ -84,69 +84,58 @@ export const MineralsForm = () => {
 
       <div>
         <h2 className="text-2xl font-bold m-12">Nutritional Elements</h2>
-
         {/* Nutritional elements */}
-        <form className="grid grid-cols-2 gap-36 max-w-lg mx-auto">
-          <div className="col-span-1">
-            {nutritionalMinerals
-              .slice(0, Math.ceil(nutritionalMinerals.length / 2))
-              .map((mineral) => (
-                <UserInput
-                  label={mineral}
-                  value={formValues[mineral] || ""}
-                  onChange={handleMineralInputChange}
-                />
-              ))}
-          </div>
-
-          <div className="col-span-1">
-            {nutritionalMinerals
-              .slice(Math.ceil(nutritionalMinerals.length / 2))
-              .map((mineral) => (
-                <UserInput
-                  label={mineral}
-                  value={formValues[mineral] || ""}
-                  onChange={handleMineralInputChange}
-                />
-              ))}
-          </div>
+        <form className="grid grid-cols-1 gap-y-4 mx-auto mr-8 sm:grid-cols-2 sm:gap-x-16 lg:grid-cols-3">
+          {nutritionalMinerals
+            .slice(0, Math.ceil(nutritionalMinerals.length / 2))
+            .map((mineral) => (
+              <UserInput
+                label={mineral}
+                value={formValues[mineral] || ""}
+                onChange={handleMineralInputChange}
+              />
+            ))}
+          {nutritionalMinerals
+            .slice(Math.ceil(nutritionalMinerals.length / 2))
+            .map((mineral) => (
+              <UserInput
+                label={mineral}
+                value={formValues[mineral] || ""}
+                onChange={handleMineralInputChange}
+              />
+            ))}
         </form>
 
         <h2 className="text-2xl font-bold m-12">Toxic Elements</h2>
-        <form className="grid grid-cols-2 gap-36 max-w-lg mx-auto">
-          {/* Toxic elements */}
-          <div className="items-center col-span-1">
-            {toxicMinerals
-              .slice(0, Math.ceil(toxicMinerals.length / 2))
-              .map((mineral) => (
-                <UserInput
-                  label={mineral}
-                  value={formValues[mineral] || ""}
-                  onChange={handleMineralInputChange}
-                />
-              ))}
-          </div>
-
-          <div className="items-center col-span-1">
-            {toxicMinerals
-              .slice(Math.ceil(toxicMinerals.length / 2))
-              .map((mineral) => (
-                <UserInput
-                  label={mineral}
-                  value={formValues[mineral] || ""}
-                  onChange={handleMineralInputChange}
-                />
-              ))}
-          </div>
+        {/* Toxic elements */}
+        <form className="grid grid-cols-1 gap-y-4 mx-auto mr-8 sm:grid-cols-2 sm:gap-x-16 lg:grid-cols-3">
+          {toxicMinerals
+            .slice(0, Math.ceil(toxicMinerals.length / 2))
+            .map((mineral) => (
+              <UserInput
+                label={mineral}
+                value={formValues[mineral] || ""}
+                onChange={handleMineralInputChange}
+              />
+            ))}
+          {toxicMinerals
+            .slice(Math.ceil(toxicMinerals.length / 2))
+            .map((mineral) => (
+              <UserInput
+                label={mineral}
+                value={formValues[mineral] || ""}
+                onChange={handleMineralInputChange}
+              />
+            ))}
         </form>
       </div>
       <div>
         <button
           type="button"
-          className="m-8 p-3 rounded-md"
+          className="m-16 p-3 rounded-md"
           onClick={handleClick}
         >
-          Process Results
+          Process results
         </button>
         {isError ? <div>Error</div> : null}
       </div>

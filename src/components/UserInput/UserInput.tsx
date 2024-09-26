@@ -15,12 +15,15 @@ export const UserInput = ({ label, value, onChange }: Props) => {
   };
 
   return (
-    <div key={label} className="flex items-center mb-3 -mr-4 justify-end">
-      <label htmlFor={label} className="font-bold pr-2">
+    <div
+      key={label}
+      className="flex w-[256px] gap-2 justify-end items-center mx-auto"
+    >
+      <label htmlFor={label} className="font-bold ">
         {label}:
       </label>
       <input
-        className="remove-arrow p-1 pl-3 border-gray-300 w-32 focus:ring-blue-500 focus:border-blue-500"
+        className="remove-arrow p-1 px-3 border-gray-300 w-32 focus:ring-blue-500 focus:border-blue-500"
         type="number"
         min="0.00000001"
         step="any"
