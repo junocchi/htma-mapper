@@ -25,9 +25,9 @@ export const EliminationTable = ({
   categorizedMinerals: CategorizedMinerals;
 }) => {
   return (
-    <div className="EliminationTable__container">
+    <div className="bg-white p-10 w-full">
       <h2 className="text-2xl font-bold mb-8">Elements Elimination</h2>
-      <div className="EliminationTable__table">
+      <div className="grid grid-cols-1 gap-4 p-2 mx-auto sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         <div className="col-span-1">
           <h2 className="bg-green-500 rounded-full py-1 px-4 text-slate-950">
             IDEAL/GOOD
