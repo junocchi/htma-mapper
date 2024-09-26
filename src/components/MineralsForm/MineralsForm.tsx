@@ -132,10 +132,10 @@ export const MineralsForm = () => {
       <div>
         <button
           type="button"
-          className="m-8 p-3 rounded-md"
+          className="m-16 p-3 rounded-md"
           onClick={handleClick}
         >
-          Process Results
+          Process results
         </button>
         {isError ? <div>Error</div> : null}
       </div>
